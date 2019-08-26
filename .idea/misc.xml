@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/microcloud-api/pom.xml" />
         <option value="$PROJECT_DIR$/microcloud-consumer-80/pom.xml" />
         <option value="$PROJECT_DIR$/microcloud-security/pom.xml" />
+        <option value="$PROJECT_DIR$/microcloud-eureka-7001/pom.xml" />
       </list>
     </option>
   </component>

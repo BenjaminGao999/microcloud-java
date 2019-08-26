@@ -23,6 +23,7 @@
     <modules>
         <module>microcloud-security</module>
         <module>microcloud-api</module>
+        <module>microcloud-eureka-7001</module>
         <module>microcloud-provider-dept-8001</module>
         <module>microcloud-consumer-80</module>
     </modules>
