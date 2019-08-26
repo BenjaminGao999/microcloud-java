@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <properties resource="jdbc.properties"/>
+
+    <context id="mysqlTables" targetRuntime="MyBatis3">
+
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+
+        <!--<plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />-->
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="${spring.datasource.url}"
+                        userId="${spring.datasource.username}"
+                        password="${spring.datasource.password}"/>
+
+
+        <!--指定生成的类型为java类型，避免数据库中number等类型字段 -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <!--自动生成的实体的存放包路径 -->
+        <javaModelGenerator targetPackage="com.example.microcloud.microcloudproviderdept8001.model"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <!--<property name="immutable" value="false"/>-->
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!--自动生成的*Mapper.xml文件存放路径 -->
+        <sqlMapGenerator targetPackage="com.example.microcloud.microcloudproviderdept8001.mapper"
+                         targetProject="src/main/resources">
+            <!--<property name="enableSubPackages" value="true"/>-->
+        </sqlMapGenerator>
+
+        <!--自动生成的*Mapper.java存放路径 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.microcloud.microcloudproviderdept8001.mapper"
+                             targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+
+        <!-- <table tableName="test" domainObjectName="Test"
+                enableCountByExample="false" enableUpdateByExample="false"
+                enableDeleteByExample="false" enableSelectByExample="false"
+                selectByExampleQueryId="false">
+             <generatedKey column="id" sqlStatement="selectuuid_short()"
+                           identity="false"/>
+         </table>-->
+
+
+        <!--  <table tableName="app_operate_log">
+              <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+              <columnOverride column="gmt_created" javaType="java.time.LocalDateTime"/>
+              <columnOverride column="gmt_modified" javaType="java.time.LocalDateTime"/>
+          </table>-->
+
+        <table tableName="dept">
+            <generatedKey column="deptno" sqlStatement="Mysql" identity="true"></generatedKey>
+        </table>
+
+    </context>
+</generatorConfiguration>
