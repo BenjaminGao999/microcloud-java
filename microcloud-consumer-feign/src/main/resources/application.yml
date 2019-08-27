@@ -1,0 +1,30 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: microcloud-consumer-feign
+
+eureka:
+  client:
+    register-with-eureka: false #客户端不注册到eureka，只是进行服务的调用
+    service-url:
+      defaultZone: http://studyjava:hello@eureka-7001.com:7001/eureka,http://studyjava:hello@eureka-7002.com:7002/eureka,http://studyjava:hello@eureka-7003.com:7003/eureka
+feign:
+  compression:
+    request:
+      mime-types:       # 可以被压缩的类型
+      - text/xml
+      - application/xml
+      - application/json
+      min-request-size: 2048 # 超过2048的字节进行压缩
+  hystrix:
+    enabled: true
+
+
+logging:
+  level:
+    com.example.microcloud: debug
+
+
+

@@ -23,6 +23,8 @@
     <modules>
         <module>microcloud-security</module>
         <module>microcloud-api</module>
+        <module>microcloud-service</module>
+        <module>microcloud-consumer-hystrix-dashboard</module>
         <module>microcloud-eureka-7001</module>
         <module>microcloud-eureka-7002</module>
         <module>microcloud-eureka-7003</module>
@@ -88,6 +90,12 @@
             </dependency>
 
             <dependency>
+                <groupId>com.example.microcloud</groupId>
+                <artifactId>microcloud-service</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>1.1.16</version>
@@ -110,6 +118,26 @@
                 <artifactId>gson</artifactId>
                 <version>2.8.5</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-feign</artifactId>
+                <version>1.4.7.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+                <version>1.4.7.RELEASE</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-hystrix</artifactId>
+                <version>1.4.7.RELEASE</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

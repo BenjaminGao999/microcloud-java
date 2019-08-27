@@ -40,4 +40,9 @@ info:
   company.name: www.study.cn
   build.artifactId: $project.artifactId$
   build.version: $project.verson$
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
 
