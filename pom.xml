@@ -29,6 +29,7 @@
         <module>microcloud-eureka-7002</module>
         <module>microcloud-eureka-7003</module>
         <module>microcloud-provider-dept-8001</module>
+        <module>microcloud-provider-company-8101</module>
         <module>microcloud-consumer-80</module>
     </modules>
 
@@ -137,6 +138,32 @@
                 <artifactId>spring-cloud-starter-hystrix</artifactId>
                 <version>1.4.7.RELEASE</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-zuul</artifactId>
+                <version>1.4.7.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-eureka</artifactId>
+                <version>1.4.7.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-eureka-server</artifactId>
+                <version>1.4.7.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-ribbon</artifactId>
+                <version>1.4.7.RELEASE</version>
+            </dependency>
+
+
 
 
         </dependencies>

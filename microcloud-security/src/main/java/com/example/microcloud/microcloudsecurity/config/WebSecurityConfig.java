@@ -3,6 +3,7 @@ package com.example.microcloud.microcloudsecurity.config;
 
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -10,6 +11,12 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    @Override
+    public void configure(WebSecurity web) {
+        // turbine
+        web.ignoring().antMatchers("/actuator/hystrix.stream", "/turbine.stream");
+
+    }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {

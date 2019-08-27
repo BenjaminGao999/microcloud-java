@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class IDeptClientServiceFallbackFactory
-        implements FallbackFactory<DeptClientService> {
+        implements FallbackFactory<IDeptClientService> {
 
     @Override
-    public DeptClientService create(Throwable cause) {
-        return new DeptClientService() {
+    public IDeptClientService create(Throwable cause) {
+        return new IDeptClientService() {
             @Override
             public Dept get(long id) {
                 Dept vo = new Dept();

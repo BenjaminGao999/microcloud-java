@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @FeignClient(value = "MICROCLOUD-PROVIDER-DEPT",
         configuration = FeignClientConfig.class,
         fallbackFactory = IDeptClientServiceFallbackFactory.class)
-public interface DeptClientService {
+public interface IDeptClientService {
     @GetMapping(value = "/dept/get/{id}")
     Dept get(@PathVariable("id") long id);
 

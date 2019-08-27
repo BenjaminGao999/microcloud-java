@@ -1,11 +1,10 @@
 package com.example.microcloud.microcloudconsumerfeign.controller;
 
 import com.example.microcloud.microcloudapi.domain.Dept;
-import com.example.microcloud.microcloudservice.service.DeptClientService;
+import com.example.microcloud.microcloudservice.service.IDeptClientService;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -18,7 +17,7 @@ import javax.annotation.Resource;
 @RestController
 public class ConsumerDeptController {
     @Resource
-    private DeptClientService deptService;
+    private IDeptClientService deptService;
 
     @GetMapping(value = "/consumer/dept/get")
     public Object getDept(long id) {

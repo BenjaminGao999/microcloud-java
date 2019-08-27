@@ -10,12 +10,15 @@
         <module name="microcloud-consumer-80" />
         <module name="microcloud-consumer-feign" />
         <module name="microcloud-consumer-hystrix-dashboard" />
+        <module name="microcloud-consumer-turbine" />
         <module name="microcloud-eureka-7001" />
         <module name="microcloud-eureka-7002" />
         <module name="microcloud-eureka-7003" />
+        <module name="microcloud-provider-company-8101" />
         <module name="microcloud-provider-dept-8001" />
         <module name="microcloud-security" />
         <module name="microcloud-service" />
+        <module name="microcloud-zuul-gateway-9501" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,12 +27,15 @@
       <module name="microcloud-consumer-80" target="1.8" />
       <module name="microcloud-consumer-feign" target="1.8" />
       <module name="microcloud-consumer-hystrix-dashboard" target="1.8" />
+      <module name="microcloud-consumer-turbine" target="1.8" />
       <module name="microcloud-eureka-7001" target="1.8" />
       <module name="microcloud-eureka-7002" target="1.8" />
       <module name="microcloud-eureka-7003" target="1.8" />
+      <module name="microcloud-provider-company-8101" target="1.8" />
       <module name="microcloud-provider-dept-8001" target="1.8" />
       <module name="microcloud-security" target="1.8" />
       <module name="microcloud-service" target="1.8" />
+      <module name="microcloud-zuul-gateway-9501" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
