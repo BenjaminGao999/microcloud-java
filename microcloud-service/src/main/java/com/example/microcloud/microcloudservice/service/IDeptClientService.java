@@ -12,16 +12,16 @@ import org.springframework.web.bind.annotation.*;
  * 通过注解@FeignClient添加接口对应的远程微服务名称value="MICROCLOUD-PROVIDER-DEPT"和
  * 服务的认证configuration=FeignClientConfig.class
  */
-@FeignClient(value = "MICROCLOUD-PROVIDER-DEPT",
+@FeignClient(value = "MICROCLOUD-ZUUL-GATEWAY",
         configuration = FeignClientConfig.class,
         fallbackFactory = IDeptClientServiceFallbackFactory.class)
 public interface IDeptClientService {
-    @GetMapping(value = "/dept/get/{id}")
-    Dept get(@PathVariable("id") long id);
+    @RequestMapping(method = RequestMethod.GET, value = "/study-proxy/dept-proxy/dept/get/{id}")
+    public Dept get(@PathVariable("id") long id);
 
-    @GetMapping(value = "/dept/list")
-    List<Dept> list();
+    @RequestMapping(method = RequestMethod.GET, value = "/study-proxy/dept-proxy/dept/list")
+    public List<Dept> list();
 
-    @PostMapping(value = "/dept/add")
-    boolean add(Dept dept);
+    @RequestMapping(method = RequestMethod.POST, value = "/study-proxy/dept-proxy/dept/add")
+    public boolean add(Dept dept);
 }

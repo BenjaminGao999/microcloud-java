@@ -46,3 +46,9 @@ management:
       exposure:
         include: hystrix.stream
 
+logging:
+  level:
+    org.springframework.security: debug
+
+
+

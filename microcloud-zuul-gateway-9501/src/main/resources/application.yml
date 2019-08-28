@@ -28,10 +28,18 @@ zuul:
   routes:
     microcloud-provider-company: /company-proxy/**
     microcloud-provider-dept: /dept-proxy/**
+  sensitive-headers: Cookie, Set-Cookie #必须这样写， 不然不能给provider接口添加认证header
+
+
+#  zuul.sensitiveHeaders: Cookie,Set-Cookie
+#			Arrays.asList("Cookie", "Set-Cookie", "Authorization"));
+
 
 
 logging:
   level:
     com.example.microcloud.microcloudzuulgateway9501: debug
+    org.springframework.security: debug
+
 
 
