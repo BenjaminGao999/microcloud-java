@@ -1,4 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.example.microcloud.microcloudservice.config.AppConfig,\
-  com.example.microcloud.microcloudservice.config.FeignClientConfig,\
-  com.example.microcloud.microcloudservice.service.IDeptClientServiceFallbackFactory

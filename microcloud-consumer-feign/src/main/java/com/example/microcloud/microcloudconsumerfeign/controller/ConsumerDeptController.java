@@ -1,8 +1,8 @@
 package com.example.microcloud.microcloudconsumerfeign.controller;
 
 import com.example.microcloud.microcloudapi.domain.Dept;
-import com.example.microcloud.microcloudservice.service.IDeptClientService;
 
+import com.example.microcloud.microcloudservice.service.IDeptClientService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;

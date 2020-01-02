@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.*;
         fallbackFactory = IDeptClientServiceFallbackFactory.class)
 public interface IDeptClientService {
     @RequestMapping(method = RequestMethod.GET, value = "/study-proxy/dept-proxy/dept/get/{id}")
-    public Dept get(@PathVariable("id") long id);
+    Dept get(@PathVariable("id") long id);
 
     @RequestMapping(method = RequestMethod.GET, value = "/study-proxy/dept-proxy/dept/list")
-    public List<Dept> list();
+    List<Dept> list();
 
     @RequestMapping(method = RequestMethod.POST, value = "/study-proxy/dept-proxy/dept/add")
-    public boolean add(Dept dept);
+    boolean add(Dept dept);
 }

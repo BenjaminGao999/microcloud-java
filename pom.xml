@@ -31,6 +31,7 @@
         <module>microcloud-provider-dept-8001</module>
         <module>microcloud-provider-company-8101</module>
         <module>microcloud-consumer-80</module>
+        <module>microcloud-consumer-feign</module>
     </modules>
 
     <dependencies>
